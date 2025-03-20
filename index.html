@@ -35,29 +35,34 @@
 
     @keyframes gradientAnimation {
       0% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
       }
+
       50% {
-      background-position: 100% 50%;
+        background-position: 100% 50%;
       }
+
       100% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
       }
     }
 
     h1 {
       font-size: 3rem;
-      color: #fff;
+      color: #f5f5f5;
       margin-bottom: 10px;
       text-align: center;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      font-weight: bold;
     }
 
     p {
       font-size: 1.2rem;
-      color: #f0f0f0;
+      color: #f5f5f5;
+      /* Changed to a darker color for better contrast */
       margin-bottom: 20px;
       text-align: center;
+      font-weight: bold;
     }
 
     .game-grid {
@@ -95,7 +100,7 @@
 
     .mole {
       width: 60%;
-      background-color: #ffcc00;
+      background-color: #007bff;
       aspect-ratio: 1;
       /* background: #ff5722; */
       border-radius: 50%;
@@ -113,6 +118,7 @@
       0% {
         transform: scale(0);
       }
+
       100% {
         transform: scale(1);
       }
@@ -245,6 +251,7 @@
       background: #0056b3;
       transform: scale(1.1);
     }
+
     #resetLeaderboardButton {
       background: #dc3545;
       color: white;
@@ -270,7 +277,7 @@
 <body>
   <div>
     <h1>Whack-a-Mole Game</h1>
-    <p>Test your reflexes and have fun!</p>
+    <p>Test your reflexes & beat your friends in this fun game </p>
   </div>
 
   <div class="game-grid" id="gameGrid">
@@ -322,9 +329,9 @@
   <div class="difficulty-selector">
     <label for="difficulty">Select Difficulty:</label>
     <select id="difficulty">
-      <option value="750">Easy</option>
-      <option value="500">Medium</option>
-      <option value="300">Hard</option>
+      <option value="1600">Easy</option>
+      <option value="1200">Medium</option>
+      <option value="800">Hard</option>
     </select>
   </div>
 
@@ -356,11 +363,12 @@
   <audio id="missSound" src="./mixkit-negative-guitar-tone-2324.wav"></audio>
   <audio id="gameOverSound" src="./mixkit-system-beep-buzzer-fail-2964.wav"></audio>
 
-  
-  <footer style="margin-top: 30px; text-align: center; color: #fff; font-size: 1rem; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">
+
+  <footer
+    style="margin-top: 30px; text-align: center; color: #fff; font-size: 1rem; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">
     <p>Made with ❤️ by <a href="https://t.me/Exodus_Tola" target="_blank">Exodus_Tola</a></p>
     <p>&copy; <span id="currentYear"></span> Whack-a-Mole Game. All rights reserved.</p>
-    </footer>
+  </footer>
   <script>
     // Dynamically set the current year in the footer
     document.getElementById('currentYear').textContent = new Date().getFullYear();

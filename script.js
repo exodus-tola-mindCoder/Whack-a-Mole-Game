@@ -99,7 +99,7 @@ startGameButton.addEventListener('click', () => {
 
   level = 1; // Reset the level
   levelDisplay.textContent = level; // Update the level display
-  moleInterval = 750; // Reset the mole interval to the default
+  moleInterval = 1600; // Reset the mole interval to the default
   isPaused = false; // Reset pause state
   pauseGameButton.style.display = 'inline-block'; // Show Pause button
   resumeGameButton.style.display = 'none'; // Hide Resume button
@@ -122,7 +122,7 @@ stopGameButton.addEventListener('click', () => {
 
 // // Difficulty Levels
 const difficultySelector = document.getElementById('difficulty');
-let moleInterval = 750;
+let moleInterval = 1600;
 // Update mole interval based on selected difficulty
 difficultySelector.addEventListener('change', (event) => {
   moleInterval = parseInt(event.target.value, 10);
